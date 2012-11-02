@@ -10,7 +10,7 @@
 
 @interface HomeView()
 {
-    UIWebView *webview;
+    UIWebView *webView;
     NSString *url;
 }
 
@@ -18,15 +18,21 @@
 
 @implementation HomeView
 
-- (id)initWithFrame:(CGRect)frame
+
+- (id)initWithFrame:(CGRect)frame andWebViewDelegate:(id<UIWebViewDelegate>)deletegate
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        url = @"http://10.18.10.2:8080";
-        webview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
+//        url = @"http://10.18.10.2:8080";
+        url = @"http://www.realestate.com.au/home-ideas/";
+        webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
+        webView.delegate = deletegate;
+        webView.scalesPageToFit = YES;
+        webView.autoresizesSubviews = YES;
+        
         [self loadWebView];
-        [self addSubview:webview];
+        [self addSubview:webView];
     }
     return self;
 }
@@ -36,7 +42,7 @@
     NSLog(@"###########loading url :%@", url);
     NSMutableURLRequest * request=[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
 
-    [webview loadRequest:request];
+    [webView loadRequest:request];
 }
 
 /*

@@ -10,4 +10,5 @@
 
 @interface HomeView : UIView
 
+- (id)initWithFrame:(CGRect)frame andWebViewDelegate:(id<UIWebViewDelegate>)deletegate;
 @end

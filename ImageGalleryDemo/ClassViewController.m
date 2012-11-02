@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    homeView = [[HomeView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    homeView = [[HomeView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame andWebViewDelegate:self];
     
     self.view = homeView;
 }
@@ -31,6 +31,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    
+    NSString *currentUrl = request.URL.absoluteString;
+    if (!currentUrl) {
+        return NO;
+    }
+    NSLog(@"===url:%@", currentUrl);
+
+    NSLog(@"===YES");
+    return YES;
 }
 
 @end
