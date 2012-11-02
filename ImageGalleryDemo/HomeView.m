@@ -7,6 +7,8 @@
 //
 
 #import "HomeView.h"
+#import "NSData+Base64.h"
+#import "NSMutableURLRequest+XSURLRequest.h"
 
 @interface HomeView()
 {
@@ -41,7 +43,25 @@
 {
     NSLog(@"###########loading url :%@", url);
     NSMutableURLRequest * request=[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    XSCookie * cookie1=[[XSCookie alloc] initForDomain:url withName:@"s_ssss" value:@"ssssss"];
+    
+    NSArray * myCookieBag=[NSArray arrayWithObjects:cookie1, nil];
+    
+    [request setAllCookies:myCookieBag];
+    [webView loadRequest:request];
+}
 
+-(void)setHomeIdeasCookie:(NSString *)token andVanityUrl:(NSString *)vanityUrl
+{
+    
+    NSMutableURLRequest * request=[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    
+    XSCookie * cookie1=[[XSCookie alloc] initForDomain:url withName:@"s_tok" value:token];
+    XSCookie * cookie2=[[XSCookie alloc] initForDomain:url withName:@"s_vani" value:vanityUrl];
+    
+    NSArray * myCookieBag=[NSArray arrayWithObjects:cookie1, cookie2, nil];
+    
+    [request setAllCookies:myCookieBag];
     [webView loadRequest:request];
 }
 

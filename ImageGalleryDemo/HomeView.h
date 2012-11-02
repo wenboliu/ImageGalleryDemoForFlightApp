@@ -11,4 +11,6 @@
 @interface HomeView : UIView
 
 - (id)initWithFrame:(CGRect)frame andWebViewDelegate:(id<UIWebViewDelegate>)deletegate;
+
+-(void)setHomeIdeasCookie:(NSString *)token andVanityUrl:(NSString *)vanityUrl;
 @end

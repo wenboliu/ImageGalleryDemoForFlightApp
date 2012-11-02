@@ -54,6 +54,10 @@
 		492F9FE21643A1150051C9B9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9FE11643A1150051C9B9 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		492F9FE41643A11A0051C9B9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9FE31643A11A0051C9B9 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		492F9FE61643A1200051C9B9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9FE51643A1200051C9B9 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4966E11E1643A9760020C40F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966E11B1643A9760020C40F /* NSData+Base64.m */; };
+		4966E11F1643A9760020C40F /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966E11D1643A9760020C40F /* NSString+Base64.m */; };
+		4966E1251643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966E1221643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.m */; };
+		4966E1261643A97F0020C40F /* XSCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966E1241643A97F0020C40F /* XSCookie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +138,14 @@
 		492F9FE11643A1150051C9B9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		492F9FE31643A11A0051C9B9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		492F9FE51643A1200051C9B9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4966E11A1643A9760020C40F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		4966E11B1643A9760020C40F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		4966E11C1643A9760020C40F /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		4966E11D1643A9760020C40F /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		4966E1211643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+XSURLRequest.h"; sourceTree = "<group>"; };
+		4966E1221643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+XSURLRequest.m"; sourceTree = "<group>"; };
+		4966E1231643A97F0020C40F /* XSCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSCookie.h; sourceTree = "<group>"; };
+		4966E1241643A97F0020C40F /* XSCookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSCookie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +219,8 @@
 		492F9F49164374F00051C9B9 /* ImageGalleryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4966E1201643A97F0020C40F /* XSCookie */,
+				4966E1191643A9760020C40F /* Base64 */,
 				492F9FD116439C3C0051C9B9 /* Model */,
 				492F9F90164398BC0051C9B9 /* Libraries */,
 				492F9F8116437C060051C9B9 /* HomeView.h */,
@@ -407,6 +421,28 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4966E1191643A9760020C40F /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				4966E11A1643A9760020C40F /* NSData+Base64.h */,
+				4966E11B1643A9760020C40F /* NSData+Base64.m */,
+				4966E11C1643A9760020C40F /* NSString+Base64.h */,
+				4966E11D1643A9760020C40F /* NSString+Base64.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		4966E1201643A97F0020C40F /* XSCookie */ = {
+			isa = PBXGroup;
+			children = (
+				4966E1211643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.h */,
+				4966E1221643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.m */,
+				4966E1231643A97F0020C40F /* XSCookie.h */,
+				4966E1241643A97F0020C40F /* XSCookie.m */,
+			);
+			path = XSCookie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -546,6 +582,10 @@
 				492F9FD0164398BC0051C9B9 /* EGOPhotoScrollView.m in Sources */,
 				492F9FD616439C3C0051C9B9 /* MyPhoto.m in Sources */,
 				492F9FD716439C3C0051C9B9 /* MyPhotoSource.m in Sources */,
+				4966E11E1643A9760020C40F /* NSData+Base64.m in Sources */,
+				4966E11F1643A9760020C40F /* NSString+Base64.m in Sources */,
+				4966E1251643A97F0020C40F /* NSMutableURLRequest+XSURLRequest.m in Sources */,
+				4966E1261643A97F0020C40F /* XSCookie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

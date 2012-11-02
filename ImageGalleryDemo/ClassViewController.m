@@ -12,6 +12,8 @@
 #import "MyPhotoSource.h"
 #import "MyPhoto.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "NSData+Base64.h"
+#import "NSMutableURLRequest+XSURLRequest.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -63,10 +65,10 @@
     }
     else if (contained(currentUrl, @"facebook-login"))
     {
-        
+        [self facebookLogin];
+        NSLog(@"===NO");
+        return NO;
     }
-    
-    
     NSLog(@"===YES");
     return YES;
 }
@@ -168,20 +170,20 @@
     }
     requestConnection = nil;
     NSMutableString *userInfo = [[NSMutableString alloc] initWithCapacity:7];
-//    [userInfo appendString:[self base64Encode:@"-9999"]];
+    [userInfo appendString:base64Encode(@"-9999")];
     NSString *separator = @"|";
     [userInfo appendString:separator];
-//    [userInfo appendFormat:[self base64Encode:[@"http://graph.facebook.com/user/picture" stringByReplacingOccurrencesOfString:@"user" withString:user.id]]];
+    [userInfo appendFormat:base64Encode([@"http://graph.facebook.com/user/picture" stringByReplacingOccurrencesOfString:@"user" withString:user.id])];
     [userInfo appendString:separator];
-//    [userInfo appendString:[self base64Encode:user.username]];
+    [userInfo appendString:base64Encode(user.username)];
     [userInfo appendString:separator];
-//    [userInfo appendString:[self base64Encode:user.name]];
+    [userInfo appendString:base64Encode(user.name)];
     [userInfo appendString:separator];
-//    [userInfo appendString:[self base64Encode:[user objectForKey:@"email"]]];
+    [userInfo appendString:base64Encode([user objectForKey:@"email"])];
     [userInfo appendString:separator];
-//    [userInfo appendString:[self base64Encode:user.id]];
+    [userInfo appendString:base64Encode(user.id)];
     [userInfo appendString:separator];
-//    [userInfo appendString:[self base64Encode:@"loggedInIp"]];
+    [userInfo appendString:base64Encode(@"loggedInIp")];
     NSLog(@"============");
     NSLog(@"id :%@", user.id);
     NSLog(@"name :%@", user.name);
@@ -189,21 +191,26 @@
     NSLog(@"link :%@", [user objectForKey:@"email"]);
     NSLog(@"test :%@", userInfo);
     NSLog(@"============");
-//    [self setHomeIdeasCookie:userInfo andVanityUrl:user.username];
-    //    [self loadUrl:_url];
-    //    NSLog(@"------------");
-    //
-    //    NSHTTPCookie *cookie;
-    //    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    //    for (cookie in [cookieJar cookies]) {
-    //        NSLog(@"------%@", cookie);
-    //    }
+   [homeView setHomeIdeasCookie:userInfo andVanityUrl:user.username];
 }
 
 
 static BOOL contained(NSString* string, NSString* sequence)
 {
     NSRange find = [string rangeOfString:sequence];
+#if !__has_feature(objc_arc)
+    [find autorelease];
+#endif
     return  find.location != NSNotFound;
+}
+
+static NSString* base64Encode(NSString* str)
+{
+    NSData *inputData = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString = [inputData base64EncodedString];
+#if !__has_feature(objc_arc)
+    [encodedString autorelease];
+#endif
+    return encodedString;
 }
 @end
