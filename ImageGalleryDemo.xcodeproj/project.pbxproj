@@ -17,8 +17,6 @@
 		492F9F58164374F00051C9B9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F57164374F00051C9B9 /* Default@2x.png */; };
 		492F9F5A164374F00051C9B9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F59164374F00051C9B9 /* Default-568h@2x.png */; };
 		492F9F5D164374F00051C9B9 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F9F5C164374F00051C9B9 /* ClassViewController.m */; };
-		492F9F60164374F00051C9B9 /* ClassViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F5E164374F00051C9B9 /* ClassViewController_iPhone.xib */; };
-		492F9F63164374F00051C9B9 /* ClassViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F61164374F00051C9B9 /* ClassViewController_iPad.xib */; };
 		492F9F6B164374F00051C9B9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9F6A164374F00051C9B9 /* SenTestingKit.framework */; };
 		492F9F6C164374F00051C9B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9F43164374F00051C9B9 /* UIKit.framework */; };
 		492F9F6D164374F00051C9B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9F45164374F00051C9B9 /* Foundation.framework */; };
@@ -52,8 +50,6 @@
 		492F9F59164374F00051C9B9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		492F9F5B164374F00051C9B9 /* ClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
 		492F9F5C164374F00051C9B9 /* ClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
-		492F9F5F164374F00051C9B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ClassViewController_iPhone.xib; sourceTree = "<group>"; };
-		492F9F62164374F00051C9B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ClassViewController_iPad.xib; sourceTree = "<group>"; };
 		492F9F69164374F00051C9B9 /* ImageGalleryDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGalleryDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		492F9F6A164374F00051C9B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		492F9F72164374F00051C9B9 /* ImageGalleryDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageGalleryDemoTests-Info.plist"; sourceTree = "<group>"; };
@@ -123,8 +119,6 @@
 				492F9F53164374F00051C9B9 /* ClassAppDelegate.m */,
 				492F9F5B164374F00051C9B9 /* ClassViewController.h */,
 				492F9F5C164374F00051C9B9 /* ClassViewController.m */,
-				492F9F5E164374F00051C9B9 /* ClassViewController_iPhone.xib */,
-				492F9F61164374F00051C9B9 /* ClassViewController_iPad.xib */,
 				492F9F4A164374F00051C9B9 /* Supporting Files */,
 			);
 			path = ImageGalleryDemo;
@@ -239,8 +233,6 @@
 				492F9F56164374F00051C9B9 /* Default.png in Resources */,
 				492F9F58164374F00051C9B9 /* Default@2x.png in Resources */,
 				492F9F5A164374F00051C9B9 /* Default-568h@2x.png in Resources */,
-				492F9F60164374F00051C9B9 /* ClassViewController_iPhone.xib in Resources */,
-				492F9F63164374F00051C9B9 /* ClassViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,22 +298,6 @@
 				492F9F4D164374F00051C9B9 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		492F9F5E164374F00051C9B9 /* ClassViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				492F9F5F164374F00051C9B9 /* en */,
-			);
-			name = ClassViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		492F9F61164374F00051C9B9 /* ClassViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				492F9F62164374F00051C9B9 /* en */,
-			);
-			name = ClassViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		492F9F73164374F00051C9B9 /* InfoPlist.strings */ = {
