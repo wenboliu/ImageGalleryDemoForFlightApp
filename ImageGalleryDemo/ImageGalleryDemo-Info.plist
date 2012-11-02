@@ -42,5 +42,16 @@
 	</array>
 	<key>CFBundleIconFile</key>
 	<string>apple-touch-icon-114x114.png</string>
+    <key>FacebookAppID</key>
+    <string>153170041492110</string>
+    <key>CFBundleURLTypes</key>
+        <array>
+    		<dict>
+    			<key>CFBundleURLSchemes</key>
+            			<array>
+                				<string>fb153170041492110</string>
+                			</array>
+            		</dict>
+        	</array>
 </dict>
 </plist>
