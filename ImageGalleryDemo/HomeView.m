@@ -25,7 +25,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
         url = @"http://10.18.10.2:8080";
 //        url = @"http://www.realestate.com.au/home-ideas/";
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
@@ -64,14 +63,5 @@
     [request setAllCookies:myCookieBag];
     [webView loadRequest:request];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
