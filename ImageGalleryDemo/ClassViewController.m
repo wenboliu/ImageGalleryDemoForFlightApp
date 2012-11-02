@@ -7,8 +7,12 @@
 //
 
 #import "ClassViewController.h"
+#import "HomeView.h"
 
 @interface ClassViewController ()
+{
+    HomeView *homeView;
+}
 
 @end
 
@@ -18,11 +22,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    homeView = [[HomeView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     
-    view.backgroundColor = [UIColor greenColor];
-    
-    self.view = view;
+    self.view = homeView;
 }
 
 - (void)didReceiveMemoryWarning

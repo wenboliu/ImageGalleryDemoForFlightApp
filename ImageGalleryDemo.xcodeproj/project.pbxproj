@@ -22,6 +22,8 @@
 		492F9F6D164374F00051C9B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F9F45164374F00051C9B9 /* Foundation.framework */; };
 		492F9F75164374F00051C9B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F73164374F00051C9B9 /* InfoPlist.strings */; };
 		492F9F78164374F00051C9B9 /* ImageGalleryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F9F77164374F00051C9B9 /* ImageGalleryDemoTests.m */; };
+		492F9F8316437C060051C9B9 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F9F8216437C060051C9B9 /* HomeView.m */; };
+		492F9F891643931A0051C9B9 /* apple-touch-icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 492F9F881643931A0051C9B9 /* apple-touch-icon-114x114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		492F9F74164374F00051C9B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492F9F76164374F00051C9B9 /* ImageGalleryDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageGalleryDemoTests.h; sourceTree = "<group>"; };
 		492F9F77164374F00051C9B9 /* ImageGalleryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryDemoTests.m; sourceTree = "<group>"; };
+		492F9F8116437C060051C9B9 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		492F9F8216437C060051C9B9 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
+		492F9F881643931A0051C9B9 /* apple-touch-icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-114x114.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,8 @@
 		492F9F49164374F00051C9B9 /* ImageGalleryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				492F9F8116437C060051C9B9 /* HomeView.h */,
+				492F9F8216437C060051C9B9 /* HomeView.m */,
 				492F9F52164374F00051C9B9 /* ClassAppDelegate.h */,
 				492F9F53164374F00051C9B9 /* ClassAppDelegate.m */,
 				492F9F5B164374F00051C9B9 /* ClassViewController.h */,
@@ -127,6 +134,7 @@
 		492F9F4A164374F00051C9B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				492F9F881643931A0051C9B9 /* apple-touch-icon-114x114.png */,
 				492F9F4B164374F00051C9B9 /* ImageGalleryDemo-Info.plist */,
 				492F9F4C164374F00051C9B9 /* InfoPlist.strings */,
 				492F9F4F164374F00051C9B9 /* main.m */,
@@ -233,6 +241,7 @@
 				492F9F56164374F00051C9B9 /* Default.png in Resources */,
 				492F9F58164374F00051C9B9 /* Default@2x.png in Resources */,
 				492F9F5A164374F00051C9B9 /* Default-568h@2x.png in Resources */,
+				492F9F891643931A0051C9B9 /* apple-touch-icon-114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,7 @@
 				492F9F50164374F00051C9B9 /* main.m in Sources */,
 				492F9F54164374F00051C9B9 /* ClassAppDelegate.m in Sources */,
 				492F9F5D164374F00051C9B9 /* ClassViewController.m in Sources */,
+				492F9F8316437C060051C9B9 /* HomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
