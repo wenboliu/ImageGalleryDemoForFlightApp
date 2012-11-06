@@ -184,7 +184,7 @@
     NSLog(@"link :%@", [user objectForKey:@"email"]);
     NSLog(@"test :%@", userInfo);
     NSLog(@"============");
-   [homeView setHomeIdeasCookie:userInfo andVanityUrl:user.username];
+   [homeView setHomeIdeasCookie:[userInfo stringByReplacingOccurrencesOfString:@"=" withString:@"_"] andVanityUrl:user.username];
 }
 
 

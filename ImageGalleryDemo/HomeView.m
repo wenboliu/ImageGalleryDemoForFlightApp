@@ -25,8 +25,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        url = @"http://10.18.10.2:8080";
-//        url = @"http://www.realestate.com.au/home-ideas/";
+//        url = @"http://10.18.10.2:8080";
+//        url = @"http://www.app.hi-qa.vpc.realestate.com.au/home-ideas/";
+        url = @"http://www.realestate.com.au/home-ideas/";
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
         webView.delegate = deletegate;
         webView.scalesPageToFit = YES;
